@@ -23,7 +23,7 @@ public class UserRegistration {
             System.out.println("Invalid LastName");
     }
 
-    /* UC1: Validate EmailId  */
+    /* UC3: Validate EmailId  */
     private void validEmail() {
         System.out.println("Enter The Email Id");
         String emailid=sc.nextLine();
