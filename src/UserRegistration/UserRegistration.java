@@ -33,7 +33,7 @@ public class UserRegistration {
             System.out.println("Invalid EmailId");
     }
 
-    /* UC4: Validate EmailId  */
+    /* UC4: Validate MobileNumber  */
     private void ValidMobileNumber() {
         System.out.println("Enter The Mobile Number");
         String mobileno=sc.nextLine();
