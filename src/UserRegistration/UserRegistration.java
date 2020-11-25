@@ -33,12 +33,22 @@ public class UserRegistration {
             System.out.println("Invalid EmailId");
     }
 
+    /* UC4: Validate EmailId  */
+    private void ValidMobileNumber() {
+        System.out.println("Enter The Mobile Number");
+        String mobileno=sc.nextLine();
+        if (mobileno.matches("^[+]{1}[0-9]{2}[ ][0-9]{10}"))
+            System.out.println("Valid Mobile Number");
+        else
+            System.out.println("Invalid Mobile Number");
+    }
+
     public static void main(String []args){
         UserRegistration userregistration=new UserRegistration();
         Scanner sc=new Scanner(System.in);
         while (true){
             System.out.println("\n-------WELCOME TO USER REGISTRATION--------");
-            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName" + "\n3. Email");
+            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName" + "\n3. Email" + "\n4. MobileNumber");
             int ch=sc.nextInt();
             switch (ch) {
                 case 1:
@@ -49,6 +59,9 @@ public class UserRegistration {
                     break;
                 case 3:
                     userregistration.validEmail();
+                    break;
+                case 4:
+                    userregistration.ValidMobileNumber();
                     break;
                 default:
                     System.out.println("Quit");
