@@ -43,12 +43,24 @@ public class UserRegistration {
             System.out.println("Invalid Mobile Number");
     }
 
+    /* UC5: Validate Password having Minimum 8 characters*/
+    private void ValidPasswordRuleOne() {
+        System.out.println("Enter The Password");
+        String password=sc.nextLine();
+        if (password.matches("^[a-zA-Z0-9]{8}$"))
+            System.out.println("Valid Password");
+        else
+            System.out.println("Invalid Password");
+
+    }
+
     public static void main(String []args){
         UserRegistration userregistration=new UserRegistration();
         Scanner sc=new Scanner(System.in);
         while (true){
             System.out.println("\n-------WELCOME TO USER REGISTRATION--------");
-            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName" + "\n3. Email" + "\n4. MobileNumber");
+            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName" + "\n3. Email"
+                    + "\n4. MobileNumber" + "\n5. PasswordRule1");
             int ch=sc.nextInt();
             switch (ch) {
                 case 1:
@@ -62,6 +74,9 @@ public class UserRegistration {
                     break;
                 case 4:
                     userregistration.ValidMobileNumber();
+                    break;
+                case 5:
+                    userregistration.ValidPasswordRuleOne();
                     break;
                 default:
                     System.out.println("Quit");
