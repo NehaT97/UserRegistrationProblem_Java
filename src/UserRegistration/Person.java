@@ -1,5 +1,4 @@
 package UserRegistration;
-
 public class Person {
     String firstName;
     String lastName;
@@ -11,19 +10,23 @@ public class Person {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName)
+    {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public String getLastName()
+    {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName)
+    {
         this.lastName = lastName;
     }
 
-    public String getEmailId() {
+    public String getEmailId()
+    {
         return emailId;
     }
 
@@ -47,3 +50,4 @@ public class Person {
         this.password = password;
     }
 }
+
