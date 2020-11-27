@@ -10,6 +10,14 @@ public class UserRegistration {
     static String patternPhoneNumber = "^(\\+91|91)[ ]{1}[6-9]{1}[0-9]{9}$";
     static String patternPasswordAllRule =  "^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 
+    public static final String[] validEmailIds = new String[] { "abc@yahoo.com", "abc-100@yahoo.com",
+            "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com",
+            "abc@gmail.com.com", "abc+100@gmail.com" };
+
+    public static final String[] inValidEmailIds = new String[] { "abc@.com.my", "abc123@gmail.a", "abc123@.com",
+            "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com", "abc..2002@gmail.com", "abc.@gmail.com",
+            "abc@abc@gmail.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au" };
+
     /* UC1: Validate First Name  */
     public void validFirstName(Person person) {
         System.out.println("Enter The First Name");
@@ -78,6 +86,22 @@ public class UserRegistration {
         else
             System.out.println("Invalid password");
             quit();
+    }
+
+    /* UC9_All Valid Emails */
+    public void validAllEmail(String[] emails) {
+        String email = null;
+        System.out.println(emails.length);
+        for (int i = 0; i < emails.length; i++) {
+            email = emails[i];
+            Pattern pattern = Pattern.compile(patternEmailId);
+            Matcher Match = pattern.matcher(email);
+            if (Match.matches()) {
+                System.out.println(email + " : Email Validated");
+            } else
+                System.out.println(email + " : Invalid email ID");
+        }
+        quit();
     }
 
     public void quit() {

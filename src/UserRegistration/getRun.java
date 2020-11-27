@@ -9,7 +9,8 @@ public class getRun {
         boolean loop=true;
         while (loop==true) {
             System.out.println("-----WELCOME TO USER REGISTRATION PROGRAM-----");
-            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName" + "\n3. Email" + "\n4. MobileNumber" + "\n5. Password" + "\n6. Quit");
+            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName" + "\n3. Email"
+                    + "\n4. MobileNumber" + "\n5. Password" + "\n6. ValidAllEmails" + "\n7. Quit");
             int ch = sc.nextInt();
             switch (ch) {
                 case 1:
@@ -28,6 +29,9 @@ public class getRun {
                     validate.validPasswordRuleOne(person);
                     break;
                 case 6:
+                    validate.validAllEmail(UserRegistration.inValidEmailIds);
+                    break;
+                case 7:
                     loop=false;
                 default:
                     System.out.println("Quit");
