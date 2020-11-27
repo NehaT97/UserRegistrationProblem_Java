@@ -29,7 +29,6 @@ public class getRun {
                 default:
                     System.out.println("Quit");
             }
-
         }
     }
 }

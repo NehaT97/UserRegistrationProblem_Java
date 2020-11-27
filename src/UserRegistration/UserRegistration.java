@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 public class UserRegistration {
     Scanner sc = new Scanner(System.in);
     static String patternFirstAndLastName = "^[A-Z]{1}[a-zA-Z]{2,}$";
+    static String patternEmailId = "^[a-zA-Z][a-zA-Z0-9_\\-+]*[.]{0,1}[a-zA-Z0-9_\\-+]{1,}[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}[.]{0,}[a-zA-Z]*$";
 
     /* UC1: Validate First Name  */
     public void validFirstName(Person person) {
@@ -36,6 +37,16 @@ public class UserRegistration {
     }
 
     public void validEmailId(Person person) {
+        System.out.println("Enter The Email Id");
+        String emailId=sc.nextLine();
+        Pattern pattern = Pattern.compile(patternEmailId);
+        Matcher match = pattern.matcher(emailId);
+        if (match.matches()) {
+            System.out.println("Valid EmailId ");
+        }
+        else
+            System.out.println("Invalid EmailId");
+            quit();
     }
 
     public void validMobileNumber(Person person) {
