@@ -1,5 +1,4 @@
 package UserRegistration;
-
 public class Person {
     String firstName;
     String lastName;
@@ -51,3 +50,4 @@ public class Person {
         this.password = password;
     }
 }
+
