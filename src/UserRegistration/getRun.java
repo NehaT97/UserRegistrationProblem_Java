@@ -6,9 +6,10 @@ public class getRun {
         Scanner sc=new Scanner(System.in);
         Person person = new Person();
         UserRegistration validate = new UserRegistration();
-        while (true) {
+        boolean loop=true;
+        while (loop==true) {
             System.out.println("-----WELCOME TO USER REGISTRATION PROGRAM-----");
-            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName" + "\n3. Email" + "\n4. MobileNumber" + "\n5. PasswordRule1");
+            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName" + "\n3. Email" + "\n4. MobileNumber" + "\n5. Password" + "\n6. Quit");
             int ch = sc.nextInt();
             switch (ch) {
                 case 1:
@@ -26,6 +27,8 @@ public class getRun {
                 case 5:
                     validate.validPasswordRuleOne(person);
                     break;
+                case 6:
+                    loop=false;
                 default:
                     System.out.println("Quit");
             }

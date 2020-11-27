@@ -8,8 +8,7 @@ public class UserRegistration {
     static String patternFirstAndLastName = "^[A-Z]{1}[a-zA-Z]{2,}$";
     static String patternEmailId = "^[a-zA-Z][a-zA-Z0-9_\\-+]*[.]{0,1}[a-zA-Z0-9_\\-+]{1,}[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}[.]{0,}[a-zA-Z]*$";
     static String patternPhoneNumber = "^(\\+91|91)[ ]{1}[6-9]{1}[0-9]{9}$";
-    static String patternPasswordRuleOne = "^[a-zA-Z0-9]{8,}$";
-
+    static String patternPasswordAllRule =  "^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 
     /* UC1: Validate First Name  */
     public void validFirstName(Person person) {
@@ -67,17 +66,17 @@ public class UserRegistration {
             quit();
     }
 
-    /* UC5: Validate Password having Minimum 8 characters*/
+    /* UC5: Validate Password With All Rule*/
     public void validPasswordRuleOne(Person person) {
-        System.out.println("Enter The Password");
+        System.out.println("Enter The Password with (minimum 8 char | must contain At least 1 Numeric value & Special Character)");
         String password=sc.nextLine();
-        Pattern pattern = Pattern.compile(patternPasswordRuleOne);
+        Pattern pattern = Pattern.compile(patternPasswordAllRule);
         Matcher match = pattern.matcher(password);
         if (match.matches()) {
             System.out.println("Valid password ");
         }
         else
-            System.out.println("Invalid password-Enter Minimum 8 characters");
+            System.out.println("Invalid password");
             quit();
     }
 
