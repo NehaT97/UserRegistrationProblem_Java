@@ -1,21 +1,28 @@
 package UserRegistration;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class UserRegistration {
-Scanner sc=new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
+    Person person = new Person();
 
-    private void firstName() {
-        System.out.println("Enter the First Name");
-        String firstName=sc.nextLine();
-        if (firstName.matches("^[A-Z]{1}[a-z]{2,}"))
-            System.out.println("Valid FirstName");
-        else
-            System.out.println("Invalid FirstName");
-    }
-    
-    public static void main(String []args){
-        System.out.println("WELCOME TO USER REGISTRATION");
-        UserRegistration userregistration=new UserRegistration();
-        userregistration.firstName();
+    static String patternFirstName = "^[A-Z]{1}[a-zA-Z]{2,}$";
 
+
+    /* UC1: Validate First Name  */
+    public void validFirstName(Person person) {
+        while (true) {
+            System.out.println("Enter The First Name");
+            String firstName = sc.nextLine();
+            Pattern pattern = Pattern.compile(patternFirstName);
+            Matcher match = pattern.matcher(firstName);
+            if (match.matches()) {
+                person.setFirstName(firstame);
+                System.out.println("Valid FirstName");
+            }
+            else
+                System.out.println("Invalid FirstName");
+        }
     }
 }
