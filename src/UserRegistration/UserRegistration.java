@@ -1,47 +1,59 @@
 package UserRegistration;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class UserRegistration {
-    Scanner sc;
+    Scanner sc = new Scanner(System.in);
+    static String patternFirstAndLastName = "^[A-Z]{1}[a-zA-Z]{2,}$";
 
     /* UC1: Validate First Name  */
-    private void firstName() {
-        sc=new Scanner(System.in);
+    public void validFirstName(Person person) {
         System.out.println("Enter The First Name");
-        String firstname=sc.nextLine();
-        if (firstname.matches("^[A-Z]{1}[a-z]{2,}"))
+        String firstName = sc.nextLine();
+        Pattern pattern = Pattern.compile(patternFirstAndLastName);
+        Matcher match = pattern.matcher(firstName);
+        if (match.matches()) {
             System.out.println("Valid FirstName");
+        }
         else
             System.out.println("Invalid FirstName");
-    }
+            quit();
+     }
 
     /* UC2: Validate Last Name  */
-    private void lastName(){
-        sc=new Scanner(System.in);
+    public void validLastName(Person person) {
         System.out.println("Enter The Last Name");
-        String lastname=sc.nextLine();
-        if (lastname.matches("[A-Z]{1}[a-z]{2,}"))
+        String lastName = sc.nextLine();
+        Pattern pattern = Pattern.compile(patternFirstAndLastName);
+        Matcher match = pattern.matcher(lastName);
+        if (match.matches()) {
             System.out.println("Valid lastName");
+        }
         else
             System.out.println("Invalid LastName");
+            quit();
     }
 
-    public static void main(String []args){
-        UserRegistration userregistration=new UserRegistration();
-        Scanner sc=new Scanner(System.in);
-        while (true){
-            System.out.println("WELCOME TO USER REGISTRATION");
-            System.out.println("\nSelect Any Case To Validate" + "\n1. FirstName" + "\n2. LastName");
-            int ch=sc.nextInt();
-            switch (ch) {
-                case 1:
-                    userregistration.firstName();
-                    break;
-                case 2:
-                    userregistration.lastName();
-                    break;
-                default:
-                    System.out.println("Quit");
-            }
+    public void validEmailId(Person person) {
+    }
+
+    public void validMobileNumber(Person person) {
+    }
+
+    public void validPasswordRuleOne(Person person) {
+    }
+
+    public void quit() {
+        Boolean loop = true;
+        while (loop == true) {
+            String input = "y";
+            System.out.println("Want to continue(y | n)");
+            String ans = sc.nextLine();
+            if (ans.equals(input)) {
+                return;
+            } else
+                loop = false;
         }
     }
 }
