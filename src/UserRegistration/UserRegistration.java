@@ -15,7 +15,6 @@ public class UserRegistration {
             Pattern pattern = Pattern.compile(patternFirstName);
             Matcher match = pattern.matcher(firstName);
             if (match.matches()) {
-                person.setFirstName(firstName);
                 System.out.println("Valid FirstName");
             }
             else
