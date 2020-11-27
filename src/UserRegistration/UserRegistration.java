@@ -7,6 +7,8 @@ public class UserRegistration {
     Scanner sc = new Scanner(System.in);
     static String patternFirstAndLastName = "^[A-Z]{1}[a-zA-Z]{2,}$";
     static String patternEmailId = "^[a-zA-Z][a-zA-Z0-9_\\-+]*[.]{0,1}[a-zA-Z0-9_\\-+]{1,}[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}[.]{0,}[a-zA-Z]*$";
+    static String patternPhoneNumber = "^(\\+91|91)[ ]{1}[6-9]{1}[0-9]{9}$";
+
 
     /* UC1: Validate First Name  */
     public void validFirstName(Person person) {
@@ -36,6 +38,7 @@ public class UserRegistration {
             quit();
     }
 
+    /* UC3: Validate EmailId  */
     public void validEmailId(Person person) {
         System.out.println("Enter The Email Id");
         String emailId=sc.nextLine();
@@ -49,7 +52,18 @@ public class UserRegistration {
             quit();
     }
 
-    public void validMobileNumber(Person person) {
+    /* UC4: Validate MobileNumber  */
+    public void validPhoneNumber(Person person) {
+        System.out.println("Enter The Phone Number");
+        String phoneNo=sc.nextLine();
+        Pattern pattern = Pattern.compile(patternPhoneNumber);
+        Matcher match = pattern.matcher(phoneNo);
+        if (match.matches()) {
+            System.out.println("Valid PhoneNumber ");
+        }
+        else
+            System.out.println("Invalid PhoneNumber");
+            quit();
     }
 
     public void validPasswordRuleOne(Person person) {

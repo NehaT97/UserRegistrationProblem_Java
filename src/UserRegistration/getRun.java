@@ -21,7 +21,7 @@ public class getRun {
                     validate.validEmailId(person);
                     break;
                 case 4:
-                    validate.validMobileNumber(person);
+                    validate.validPhoneNumber(person);
                     break;
                 case 5:
                     validate.validPasswordRuleOne(person);
