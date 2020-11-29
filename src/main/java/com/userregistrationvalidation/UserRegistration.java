@@ -1,5 +1,7 @@
 package com.userregistrationvalidation;
 
+import com.userregistrationvalidation.exceptions.ValidationException;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -27,9 +29,10 @@ public class UserRegistration {
         Matcher match = pattern.matcher(firstName);
         if (match.matches()) {
             System.out.println("Valid FirstName");
-        } else
-            System.out.println("Invalid FirstName");
-        return true;
+            return true;
+        }
+        System.out.println("Invalid FirstName");
+        throw new ValidationException("Invalid FirstName");
     }
 
     /* UC2: Validate Last Name  */
@@ -38,9 +41,10 @@ public class UserRegistration {
         Matcher match = pattern.matcher(lastName);
         if (match.matches()) {
             System.out.println("Valid lastName");
-        } else
-            System.out.println("Invalid LastName");
-        return true;
+            return true;
+        }
+        System.out.println("Invalid LastName");
+        throw new ValidationException("Invalid LastName");
     }
 
     /* UC3: Validate EmailId  */
@@ -49,9 +53,10 @@ public class UserRegistration {
         Matcher match = pattern.matcher(emailId);
         if (match.matches()) {
             System.out.println("Valid EmailId ");
-        } else
-            System.out.println("Invalid EmailId");
-        return true;
+            return true;
+        }
+        System.out.println("Invalid EmailId");
+        throw new ValidationException("Invalid EmailId");
     }
 
     /* UC4: Validate MobileNumber  */
@@ -60,9 +65,10 @@ public class UserRegistration {
         Matcher match = pattern.matcher(phoneNo);
         if (match.matches()) {
             System.out.println("Valid PhoneNumber ");
-        } else
-            System.out.println("Invalid PhoneNumber");
-        return true;
+            return true;
+        }
+        System.out.println("Invalid PhoneNumber");
+        throw new ValidationException("Invalid PhoneNumber");
     }
 
     /* UC5: Validate Password With All Rule*/
@@ -71,9 +77,10 @@ public class UserRegistration {
         Matcher match = pattern.matcher(password);
         if (match.matches()) {
             System.out.println("Valid password ");
-        } else
-            System.out.println("Invalid password");
-        return true;
+            return true;
+        }
+        System.out.println("Invalid password");
+        throw new ValidationException("Invalid password");
     }
 
     /* UC9_All Valid Emails */
@@ -86,8 +93,10 @@ public class UserRegistration {
             Matcher Match = pattern.matcher(email);
             if (Match.matches()) {
                 System.out.println(email + " : Email Validated");
-            } else
+            } else {
                 System.out.println(email + " : Invalid email ID");
+                throw new ValidationException(email + " : Invalid email ID");
+            }
         }
     }
 }

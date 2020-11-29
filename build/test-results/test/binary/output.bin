@@ -18,3 +18,25 @@
 *Email Id to validate : abc+100@gmail.com
 
 Valid EmailId 
+$Email Id to validate : abc@.com.my
+Invalid EmailId
+'Email Id to validate : abc123@gmail.a
+Invalid EmailId
+$Email Id to validate : abc123@.com
+Invalid EmailId
+(Email Id to validate : abc123@.com.com
+Invalid EmailId
+%Email Id to validate : .abc@abc.com
+Invalid EmailId
+)Email Id to validate : abc()*@gmail.com
+Invalid EmailId
+,Email Id to validate : abc..2002@gmail.com
+Invalid EmailId
+'Email Id to validate : abc.@gmail.com
+Invalid EmailId
+*Email Id to validate : abc@abc@gmail.com
+Invalid EmailId
+)Email Id to validate : abc@gmail.com.1a
+Invalid EmailId
+,Email Id to validate : abc@gmail.com.aa.au
+Invalid EmailId
