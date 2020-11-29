@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.userregistrationvalidation.EmailValidationChecker" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-11-29T11:03:15" hostname="DESKTOP-H3OO9IA" time="0.048">
+  <properties/>
+  <testcase name="validateEmailId[0]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.035"/>
+  <testcase name="validateEmailId[1]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[2]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[3]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.0"/>
+  <testcase name="validateEmailId[4]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[5]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[6]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[7]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[8]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <system-out><![CDATA[Email Id to validate : abc@yahoo.com
+Valid EmailId 
+Email Id to validate : abc-100@yahoo.com
+Valid EmailId 
+Email Id to validate : abc.100@yahoo.com
+Valid EmailId 
+Email Id to validate : abc111@abc.com
+Valid EmailId 
+Email Id to validate : abc-100@abc.net
+Valid EmailId 
+Email Id to validate : abc.100@abc.com.au
+Valid EmailId 
+Email Id to validate : abc@1.com
+Valid EmailId 
+Email Id to validate : abc@gmail.com.com
+Valid EmailId 
+Email Id to validate : abc+100@gmail.com
+Valid EmailId 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
