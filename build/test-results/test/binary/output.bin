@@ -1,2 +1,20 @@
-0-----WELCOME TO USER REGISTRATION PROGRAM-----
-Valid password 
+&Email Id to validate : abc@yahoo.com
+Valid EmailId 
+*Email Id to validate : abc-100@yahoo.com
+Valid EmailId 
+*Email Id to validate : abc.100@yahoo.com
+Valid EmailId 
+'Email Id to validate : abc111@abc.com
+Valid EmailId 
+(Email Id to validate : abc-100@abc.net
+Valid EmailId 
++Email Id to validate : abc.100@abc.com.au
+Valid EmailId 
+"Email Id to validate : abc@1.com
+Valid EmailId 
+	*Email Id to validate : abc@gmail.com.com
+	Valid EmailId 
+
+*Email Id to validate : abc+100@gmail.com
+
+Valid EmailId 

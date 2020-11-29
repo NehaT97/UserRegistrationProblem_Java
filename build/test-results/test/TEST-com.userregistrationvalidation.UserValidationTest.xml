@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.userregistrationvalidation.UserValidationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-29T09:39:41" hostname="DESKTOP-H3OO9IA" time="0.024">
-  <properties/>
-  <testcase name="PassWord_Return_True" classname="com.userregistrationvalidation.UserValidationTest" time="0.024"/>
-  <system-out><![CDATA[-----WELCOME TO USER REGISTRATION PROGRAM-----
-Valid password 
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
