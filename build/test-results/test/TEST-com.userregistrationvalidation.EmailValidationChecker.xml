@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.userregistrationvalidation.EmailValidationChecker" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-11-29T11:03:15" hostname="DESKTOP-H3OO9IA" time="0.048">
+<testsuite name="com.userregistrationvalidation.EmailValidationChecker" tests="20" skipped="0" failures="0" errors="0" timestamp="2020-11-29T12:39:01" hostname="DESKTOP-H3OO9IA" time="0.054">
   <properties/>
-  <testcase name="validateEmailId[0]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.035"/>
-  <testcase name="validateEmailId[1]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
-  <testcase name="validateEmailId[2]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
-  <testcase name="validateEmailId[3]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.0"/>
+  <testcase name="validateEmailId[0]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.012"/>
+  <testcase name="validateEmailId[1]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.003"/>
+  <testcase name="validateEmailId[2]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.002"/>
+  <testcase name="validateEmailId[3]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
   <testcase name="validateEmailId[4]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
-  <testcase name="validateEmailId[5]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
-  <testcase name="validateEmailId[6]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[5]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.002"/>
+  <testcase name="validateEmailId[6]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.002"/>
   <testcase name="validateEmailId[7]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
   <testcase name="validateEmailId[8]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[9]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.004"/>
+  <testcase name="validateEmailId[10]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.002"/>
+  <testcase name="validateEmailId[11]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[12]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.002"/>
+  <testcase name="validateEmailId[13]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.0"/>
+  <testcase name="validateEmailId[14]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.0"/>
+  <testcase name="validateEmailId[15]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.002"/>
+  <testcase name="validateEmailId[16]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.0"/>
+  <testcase name="validateEmailId[17]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.001"/>
+  <testcase name="validateEmailId[18]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.0"/>
+  <testcase name="validateEmailId[19]" classname="com.userregistrationvalidation.EmailValidationChecker" time="0.0"/>
   <system-out><![CDATA[Email Id to validate : abc@yahoo.com
 Valid EmailId 
 Email Id to validate : abc-100@yahoo.com
@@ -28,6 +39,28 @@ Email Id to validate : abc@gmail.com.com
 Valid EmailId 
 Email Id to validate : abc+100@gmail.com
 Valid EmailId 
+Email Id to validate : abc@.com.my
+Invalid EmailId
+Email Id to validate : abc123@gmail.a
+Invalid EmailId
+Email Id to validate : abc123@.com
+Invalid EmailId
+Email Id to validate : abc123@.com.com
+Invalid EmailId
+Email Id to validate : .abc@abc.com
+Invalid EmailId
+Email Id to validate : abc()*@gmail.com
+Invalid EmailId
+Email Id to validate : abc..2002@gmail.com
+Invalid EmailId
+Email Id to validate : abc.@gmail.com
+Invalid EmailId
+Email Id to validate : abc@abc@gmail.com
+Invalid EmailId
+Email Id to validate : abc@gmail.com.1a
+Invalid EmailId
+Email Id to validate : abc@gmail.com.aa.au
+Invalid EmailId
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
