@@ -1,10 +1,11 @@
 package com.userregistrationvalidation;
-
 import com.userregistrationvalidation.exceptions.ValidationException;
-
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+@FunctionalInterface
+interface lambdaValidateFunction {
+    boolean userValidate(String Input, String Pattern);
+}
 
 public class UserRegistration {
     static Scanner sc = new Scanner(System.in);
@@ -22,12 +23,18 @@ public class UserRegistration {
             "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com", "abc..2002@gmail.com", "abc.@gmail.com",
             "abc@abc@gmail.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au"};
 
+    lambdaValidateFunction lambdapattern = (Input, Pattern) -> {
+        boolean result = Pattern.matches(Input);
+        return result;
+    };
+
+    private boolean lambdapattern(String Input ,String pattern){
+        return true;
+    }
 
     /* UC1: Validate First Name  */
     public  boolean validFirstName(String firstName) {
-        Pattern pattern = Pattern.compile(patternFirstAndLastName);
-        Matcher match = pattern.matcher(firstName);
-        if (match.matches()) {
+        if (lambdapattern(firstName,patternFirstAndLastName)) {
             System.out.println("Valid FirstName");
             return true;
         }
@@ -37,9 +44,7 @@ public class UserRegistration {
 
     /* UC2: Validate Last Name  */
     public boolean validLastName(String lastName) {
-        Pattern pattern = Pattern.compile(patternFirstAndLastName);
-        Matcher match = pattern.matcher(lastName);
-        if (match.matches()) {
+        if (lambdapattern(lastName,patternFirstAndLastName)) {
             System.out.println("Valid lastName");
             return true;
         }
@@ -49,9 +54,8 @@ public class UserRegistration {
 
     /* UC3: Validate EmailId  */
     public boolean validEmailId(String emailId) {
-        Pattern pattern = Pattern.compile(patternEmailId);
-        Matcher match = pattern.matcher(emailId);
-        if (match.matches()) {
+
+        if (lambdapattern(emailId,patternEmailId)) {
             System.out.println("Valid EmailId ");
             return true;
         }
@@ -61,9 +65,7 @@ public class UserRegistration {
 
     /* UC4: Validate MobileNumber  */
     public boolean validPhoneNumber(String phoneNo) {
-        Pattern pattern = Pattern.compile(patternPhoneNumber);
-        Matcher match = pattern.matcher(phoneNo);
-        if (match.matches()) {
+        if (lambdapattern(phoneNo,patternPhoneNumber)) {
             System.out.println("Valid PhoneNumber ");
             return true;
         }
@@ -73,9 +75,7 @@ public class UserRegistration {
 
     /* UC5: Validate Password With All Rule*/
     public boolean validPasswordAllRule(String password) {
-        Pattern pattern = Pattern.compile(patternPasswordAllRule);
-        Matcher match = pattern.matcher(password);
-        if (match.matches()) {
+        if (lambdapattern(password,patternPasswordAllRule)) {
             System.out.println("Valid password ");
             return true;
         }
@@ -89,9 +89,7 @@ public class UserRegistration {
         System.out.println(emails.length);
         for (int i = 0; i < emails.length; i++) {
             email = emails[i];
-            Pattern pattern = Pattern.compile(patternEmailId);
-            Matcher Match = pattern.matcher(email);
-            if (Match.matches()) {
+            if (lambdapattern(email,patternEmailId)) {
                 System.out.println(email + " : Email Validated");
             } else {
                 System.out.println(email + " : Invalid email ID");
@@ -99,5 +97,7 @@ public class UserRegistration {
             }
         }
     }
+
+
 }
 

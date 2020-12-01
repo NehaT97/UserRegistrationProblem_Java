@@ -1,5 +1,4 @@
 package com.userregistrationvalidation;
-
 import com.userregistrationvalidation.exceptions.ValidationException;
 import org.junit.Assert;
 import org.junit.Before;

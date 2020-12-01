@@ -1,42 +1,26 @@
-&Email Id to validate : abc@yahoo.com
-Valid EmailId 
-*Email Id to validate : abc-100@yahoo.com
-Valid EmailId 
-*Email Id to validate : abc.100@yahoo.com
-Valid EmailId 
-'Email Id to validate : abc111@abc.com
-Valid EmailId 
-(Email Id to validate : abc-100@abc.net
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid password
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid password
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid FirstName
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid FirstName
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
 Valid EmailId 
-+Email Id to validate : abc.100@abc.com.au
-Valid EmailId 
-"Email Id to validate : abc@1.com
-Valid EmailId 
-	*Email Id to validate : abc@gmail.com.com
-	Valid EmailId 
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid PhoneNumber
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid password 
+	0-----WELCOME TO USER REGISTRATION PROGRAM-----
+	Invalid LastName
 
-*Email Id to validate : abc+100@gmail.com
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
 
-Valid EmailId 
-$Email Id to validate : abc@.com.my
+Invalid EmailId
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
 Invalid EmailId
-'Email Id to validate : abc123@gmail.a
-Invalid EmailId
-$Email Id to validate : abc123@.com
-Invalid EmailId
-(Email Id to validate : abc123@.com.com
-Invalid EmailId
-%Email Id to validate : .abc@abc.com
-Invalid EmailId
-)Email Id to validate : abc()*@gmail.com
-Invalid EmailId
-,Email Id to validate : abc..2002@gmail.com
-Invalid EmailId
-'Email Id to validate : abc.@gmail.com
-Invalid EmailId
-*Email Id to validate : abc@abc@gmail.com
-Invalid EmailId
-)Email Id to validate : abc@gmail.com.1a
-Invalid EmailId
-,Email Id to validate : abc@gmail.com.aa.au
-Invalid EmailId
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid PhoneNumber 
+0-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid lastName

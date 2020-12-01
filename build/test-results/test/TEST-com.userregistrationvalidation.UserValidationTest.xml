@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.userregistrationvalidation.UserValidationTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2020-11-30T04:27:03" hostname="DESKTOP-H3OO9IA" time="0.065">
+  <properties/>
+  <testcase name="PassWord_Return_False" classname="com.userregistrationvalidation.UserValidationTest" time="0.024"/>
+  <testcase name="PassWord_Return_False2" classname="com.userregistrationvalidation.UserValidationTest" time="0.001"/>
+  <testcase name="FirstName_Return_False" classname="com.userregistrationvalidation.UserValidationTest" time="0.005"/>
+  <testcase name="FirstName_Return_True" classname="com.userregistrationvalidation.UserValidationTest" time="0.003"/>
+  <testcase name="Email_Return_True" classname="com.userregistrationvalidation.UserValidationTest" time="0.002"/>
+  <testcase name="PhoneNumber_Return_False" classname="com.userregistrationvalidation.UserValidationTest" time="0.001"/>
+  <testcase name="PassWord_Return_True" classname="com.userregistrationvalidation.UserValidationTest" time="0.001"/>
+  <testcase name="LastName_Return_False" classname="com.userregistrationvalidation.UserValidationTest" time="0.001"/>
+  <testcase name="Email_Return_False1" classname="com.userregistrationvalidation.UserValidationTest" time="0.001"/>
+  <testcase name="Email_Return_False2" classname="com.userregistrationvalidation.UserValidationTest" time="0.001"/>
+  <testcase name="PhoneNumber_Return_True" classname="com.userregistrationvalidation.UserValidationTest" time="0.001"/>
+  <testcase name="LastName_Return_True" classname="com.userregistrationvalidation.UserValidationTest" time="0.001"/>
+  <system-out><![CDATA[-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid password
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid password
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid FirstName
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid FirstName
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid EmailId 
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid PhoneNumber
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid password 
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid LastName
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid EmailId
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Invalid EmailId
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid PhoneNumber 
+-----WELCOME TO USER REGISTRATION PROGRAM-----
+Valid lastName
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
